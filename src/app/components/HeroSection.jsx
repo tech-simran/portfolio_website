@@ -16,13 +16,13 @@ const HeroSection = () => {
   <span className="mt-4 block">
     <TypeAnimation
       sequence={[
-        'Simran',
+       "Simran",
         1000,
-        'FullStack Developer',
+        "FullStack Developer",
         1000,
-        'Frontend Developer',
+       "Frontend Developer",
         1000,
-        'Web Developer',
+        "Web Developer",
         1000,
       ]}
       wrapper="span"
@@ -54,7 +54,7 @@ const HeroSection = () => {
         src="/images/hi.jpg"
         width={300}
         height={300}
-        alt="Simran's Photo"
+        alt="Simran Photo"
         className="rounded-full object-cover w-full h-full"
       />
           </div>
