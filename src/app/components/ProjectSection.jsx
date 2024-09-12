@@ -8,7 +8,7 @@ const PROJECTS_DATA = [
       title: "Portfolio Website",
       description: "A personal portfolio website to showcase my skills, projects, and experience. Built with React and styled-components.",
       image: "/images/projects/portfolio.png",
-      tags: ["React", "Web Development", "CSS"],
+      tags: ["Nextjs", "Web Development", "CSS"],
       gitUrl:"/",
       previewUrl:"/"
     },
@@ -17,7 +17,7 @@ const PROJECTS_DATA = [
       title: "E-commerce Store",
       description: "A full-featured e-commerce web application with a shopping cart, product filters, and payment integration. Developed using Node.js and MongoDB.",
       image: "/images/projects/e-com.png",
-      tags: ["Node.js", "MongoDB", "Full Stack"],
+      tags: ["Reactjs","Node.js", "MongoDB", "Full Stack"],
         gitUrl:"/",
       previewUrl:"/"
     },
@@ -26,7 +26,7 @@ const PROJECTS_DATA = [
         title: "Blog Platform",
         description: "A blog platform that allows users to create, edit, and delete posts. Includes features like user authentication and rich text editor.",
         image: "/images/projects/blog.jpg",
-        tags: ["Node.js", "Express", "MongoDB"],
+        tags: ["Nextjs", "Express", "MongoDB"],
           gitUrl:"/",
       previewUrl:"/"
       },
