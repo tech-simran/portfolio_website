@@ -22,8 +22,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack</li>
-        <li>Univercity of sistect</li>
+        <li>(10+12) Execelent Public higer Secondary School</li>
+        <li>BTec From SISTEC (Gandhinagar Bhoapal)</li>
       </ul>
     ),
   },

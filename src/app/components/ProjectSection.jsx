@@ -9,8 +9,8 @@ const PROJECTS_DATA = [
       description: "A personal portfolio website to showcase my skills, projects, and experience. Built with React and styled-components.",
       image: "/images/projects/portfolio.png",
       tags: ["Nextjs", "Web Development", "CSS"],
-      gitUrl:"/",
-      previewUrl:"/"
+      gitUrl:"https://github.com/tech-simran/portfolio_website.git",
+      previewUrl:"https://portfolio-website-wwfd.vercel.app/"
     },
     {
       id: 2,
@@ -27,8 +27,8 @@ const PROJECTS_DATA = [
         description: "A blog platform that allows users to create, edit, and delete posts. Includes features like user authentication and rich text editor.",
         image: "/images/projects/blog.jpg",
         tags: ["Nextjs", "Express", "MongoDB"],
-          gitUrl:"/",
-      previewUrl:"/"
+        gitUrl:"/",
+         previewUrl:"/"
       },
     // {
     //   id: 4,

@@ -9,15 +9,15 @@ import Image from 'next/image';
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "about",
   },
   {
     title: "Projects",
-    path: "#project",
+    path: "project",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "contact",
   },
 ];
 
@@ -59,13 +59,17 @@ const Navbar = () => {
           )}
         </div>
         <div className='menu hidden md:block md:w-auto' id='navbar'>
-          <ul className='flex p-4 md:flex-row md:p-0 md:space-x-8'>
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink className="bg-red-500" href={link.path} title={link.title} />
-              </li>
-            ))}
-          </ul>
+        <ul className='flex p-4 md:flex-row md:p-0 md:space-x-8'>
+      {navLinks.map((link, index) => (
+        <li key={index}>
+          <NavLink
+            href={link.path}
+            title={link.title}
+   
+          />
+        </li>
+      ))}
+    </ul>
         </div>
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks}/> : null}

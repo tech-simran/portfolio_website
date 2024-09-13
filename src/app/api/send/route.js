@@ -1,23 +1,36 @@
-// // import { EmailTemplate } from '../../../components/EmailTemplate';
-// import { Resend } from 'resend';
+import { Resend } from 'resend';
 
-// const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend with your API key from environment variables
 
-// export async function POST() {
-//   try {
-//     const { data, error } = await resend.emails.send({
-//       from: 'Simran <simranmansuri757@gmail.com>',
-//       to: ['simmubaba786@gmail.com'],
-//       subject: 'Hello world',
-//       react: (<><p>Email body</p></>),
-//     });
+const resend = new Resend("re_LAQEV6Xb_82C9cisqcnoFXEqzWjPfXDCG");
+       
+export const POST = async (req) => {
+  try {
+    const body = await req.json(); // Parse the incoming JSON request
+    const { to, subject, text } = body;
+    console.log("body data",to, subject, text)
+    if (!to || !subject || !text) {
+      return new Response(
+        JSON.stringify({ success: false, message: 'Missing required fields' }),
+        { status: 400 }
+      );
+    }
 
-//     if (error) {
-//       return Response.json({ error }, { status: 500 });
-//     }
-
-//     return Response.json(data);
-//   } catch (error) {
-//     return Response.json({ error }, { status: 500 });
-//   }
-// }
+    // Send the email using Resend
+    const emailResponse = await resend.emails.send({
+      from: 'Simran  <delivered@resend.dev>',
+      to,
+      subject,
+      text,
+    });
+   console.log("email response....",emailResponse)
+    return new Response(JSON.stringify({ success: true, emailResponse }), {
+      status: 200,
+    });
+  } catch (error) {
+    return new Response(
+      JSON.stringify({ success: false, message: error.message }),
+      { status: 500 }
+    );
+  }
+};
